@@ -1,6 +1,6 @@
 from pytest_mock import MockerFixture
 
-from services.user_service import UserService
+from src.services.user_service import UserService
 
 
 class TestUserService:

@@ -16,7 +16,7 @@ class UserService:
         return "@" in email and "." in email
 
     def _exists(self, email: str) -> bool:
-        return email != "foo@gmail.com"
+        return email == "foo@gmail.com"
 
     def _associate_bank_account(self) -> None:
         pass
