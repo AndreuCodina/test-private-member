@@ -1,0 +1,35 @@
+[project]
+name = "test-private-member"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright[nodejs]==1.1.397",
+    "ruff==0.11.1",
+    "pytest==8.3.4",
+    "pytest-mock==3.14.0",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "E501",   # line-too-long
+    "D100",   # undocumented-public-module
+    "D101",   # undocumented-public-class
+    "D102",   # undocumented-public-method
+    "D103",   # undocumented-public-function
+    "D104",   # undocumented-public-package
+    "D105",   # undocumented-magic-method
+    "D106",   # undocumented-public-nested-class
+    "D107",   # undocumented-public-init
+    "COM812", # missing-trailing-comma
+    "TRY003", # raise-vanilla-args
+    "S101",   # assert
+]
